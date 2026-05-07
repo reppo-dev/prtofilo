@@ -8,6 +8,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   weight: ["600", "700", "800", "900"],
@@ -34,10 +35,9 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${spaceGrotesk.className} antialiased`}
       >
-        <main>
-          <Header />
-          {children}
-        </main>
+        <Header />
+        <main className="relative  bg-white z-10">{children}</main>
+        <Footer />
       </body>
     </html>
   );

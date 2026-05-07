@@ -44,16 +44,22 @@ export const aboutItems = [
     title: "1+ Years of Experience",
     text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
   },
+  // {
+  //   id: 2,
+  //   icon: "/images/portfolio.png",
+  //   title: "Over 3 Projects Delivered",
+  //   text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
+  // },
+  // {
+  //   id: 3,
+  //   icon: "/images/review.png",
+  //   title: "200+ Satisfied Clients",
+  //   text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
+  // },
   {
-    id: 2,
+    id: 4,
     icon: "/images/portfolio.png",
-    title: "Over 3 Projects Delivered",
-    text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
-  },
-  {
-    id: 3,
-    icon: "/images/review.png",
-    title: "200+ Satisfied Clients",
+    title: "More 10 practice projects",
     text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
   },
 ];

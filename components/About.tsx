@@ -7,14 +7,14 @@ const About = () => {
       <div className="container space-y-14">
         <div className="space-y-3">
           <div className="text-4xl lg:text-7xl font-bold flex items-center">
-            <span>Ab</span>
-            <Image
+            <span>Ab</span>o
+            {/* <Image
               src="/images/images.jpg"
               alt="About icon"
               width={512}
               height={512}
               className="size-14 inline-block rounded-full shrink-0"
-            />
+            /> */}
             <span>ut me</span>
           </div>
           <p className="">
