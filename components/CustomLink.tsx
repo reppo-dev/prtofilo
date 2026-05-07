@@ -1,20 +1,126 @@
+"use client";
+import { gsap } from "gsap";
+import { useGSAP } from "@/lib/gsap";
+import { svgVariants } from "./SvgIcons";
+import { useRef } from "react";
 import Link from "next/link";
 
-interface LinkProps {
-  herf: string;
+interface CustomLinkProps {
   label: string;
+  href: string;
   className?: string;
 }
 
-const CustomLink = ({ herf, label, className }: LinkProps) => {
+export default function CustomLink({
+  label,
+  href,
+  className,
+}: CustomLinkProps) {
+  const linkRef = useRef<HTMLDivElement | null>(null);
+  const decorateSVG = (svgEl: SVGElement) => {
+    svgEl.querySelectorAll("path").forEach((path) => {
+      path.setAttribute("stroke", "currentColor");
+    });
+  };
+  useGSAP(
+    (_, contextSafe) => {
+      // 2. Type the tracker
+      let nextIndex: number | null = null;
+
+      // Safety check for the ref
+      if (!linkRef.current) return;
+
+      // 3. Type the NodeList as HTMLElement
+      const container =
+        linkRef.current.querySelector<HTMLElement>("[data-draw-line]");
+      if (!container) return;
+
+      const box = container.querySelector<HTMLElement>("[data-draw-line-box]");
+      if (!box) return;
+
+      // 4. Type the GSAP tweens
+      let enterTween: gsap.core.Tween | null = null;
+      let leaveTween: gsap.core.Tween | null = null;
+
+      // Mouse enter
+      const handleMouseEnter = contextSafe!(() => {
+        if (enterTween && enterTween.isActive()) return;
+        if (leaveTween && leaveTween.isActive()) leaveTween.kill();
+
+        if (nextIndex === null) {
+          nextIndex = Math.floor(Math.random() * svgVariants.length);
+        }
+
+        box.innerHTML = svgVariants[nextIndex];
+        // 5. Type the queried SVG and Path elements
+        const svg = box.querySelector<SVGElement>("svg");
+
+        if (svg) {
+          decorateSVG(svg);
+          const path = svg.querySelector<SVGPathElement>("path");
+          if (path) {
+            gsap.set(path, { drawSVG: "0%" });
+            enterTween = gsap.to(path, {
+              duration: 0.5,
+              drawSVG: "100%",
+              ease: "power2.inOut",
+              onComplete: () => {
+                enterTween = null;
+              },
+            });
+          }
+        }
+        nextIndex = (nextIndex + 1) % svgVariants.length;
+      });
+
+      // Mouse leave
+      const handleMouseLeave = contextSafe!(() => {
+        const path = box.querySelector<SVGPathElement>("path");
+        if (!path) return;
+
+        const playOut = () => {
+          if (leaveTween && leaveTween.isActive()) return;
+          leaveTween = gsap.to(path, {
+            duration: 0.5,
+            drawSVG: "100% 100%",
+            ease: "power2.inOut",
+            onComplete: () => {
+              leaveTween = null;
+              box.innerHTML = "";
+            },
+          });
+        };
+
+        if (enterTween && enterTween.isActive()) {
+          enterTween.eventCallback("onComplete", playOut);
+        } else {
+          playOut();
+        }
+      });
+
+      container.addEventListener("mouseenter", handleMouseEnter);
+      container.addEventListener("mouseleave", handleMouseLeave);
+
+      return () => {
+        container.removeEventListener("mouseenter", handleMouseEnter);
+        container.removeEventListener("mouseleave", handleMouseLeave);
+      };
+    },
+    { scope: linkRef },
+  );
   return (
-    <div>
-      <Link href={herf} className={`text-draw inline-block ${className}`}>
-        <p className="text-draw-p mb-0 relative">{label}</p>
-        <div className="text-draw_box relative w-full h-2" />
+    <div className="" ref={linkRef}>
+      <Link
+        href={href}
+        className={`text-draw inline-block ${className}`}
+        data-draw-line
+      >
+        <p className="text-draw__p mb-0 relative">{label}</p>
+        <div
+          data-draw-line-box=""
+          className="text-draw__box relative w-full h-[0.5em]"
+        />
       </Link>
     </div>
   );
-};
-
-export default CustomLink;
+}
