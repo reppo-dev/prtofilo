@@ -1,10 +1,42 @@
-export const projects = [
+export interface ProjectDetail {
+  id: string;
+  title: string;
+  desc: string;
+  image: string;
+  tools: string[];
+  liveUrl: string;
+  haveLive: boolean;
+  githubUrl: string;
+
+  overview: string;
+  role: string;
+  duration: string;
+  features: string[];
+  screenshots: {
+    src: string;
+    alt: string;
+  }[];
+  techStack: {
+    category: string;
+    items: string[];
+  }[];
+  structure: {
+    path: string;
+    description: string;
+  }[];
+  setup: {
+    backend?: string;
+    frontend?: string;
+    env?: string[];
+  };
+}
+
+export const projects: ProjectDetail[] = [
   {
-    id: "01",
-    title: "Full-Stack App: React + Golang",
-    desc: "A full-stack web application with React (TypeScript) frontend and Golang (Fiber) backend , JWT authentication.",
-    image: "/images/react-go-fullstack-go.png",
-    page: "/fullStackApp",
+    id: "02",
+    title: "Full-Stack App: React + Golang Fiber",
+    desc: "A modern full-stack web application with React (TypeScript) frontend and Golang (Fiber) backend. Features JWT authentication, role-based access control (RBAC), CRUD operations, and CSV export.",
+    image: "/react-go-full-stack/react-go-fullstack-go.png",
     tools: [
       "React.js",
       "TypeScript",
@@ -18,7 +50,81 @@ export const projects = [
     liveUrl: "",
     haveLive: false,
     githubUrl: "https://github.com/reppo-dev/app-react-golang-full-stack.git",
+
+    overview:
+      "This is a production-scale admin dashboard built for managing e-commerce data. I developed it to deepen my understanding of full-stack architectures, focusing on secure authentication, role-based access, and clean separation of concerns between the React frontend and Go backend.",
+    role: "Full-Stack Developer (Solo Project)",
+    duration: "4 weeks",
+    features: [
+      "JWT stored in HTTP‑only cookies for secure authentication",
+      "Password hashing with bcrypt",
+      "Role‑based access control (Admin, User, Manager)",
+      "CRUD operations for Products, Orders, and Users",
+      "One‑click CSV export (Orders, Users, Products)",
+      "Responsive UI built with Tailwind CSS and shadcn/ui",
+      "RESTful API design using Go Fiber framework",
+    ],
+    screenshots: [
+      { src: "/react-go-full-stack/login.png", alt: "Login page" },
+      {
+        src: "/react-go-full-stack/dashboard.png",
+        alt: "Dashboard with sales chart",
+      },
+      { src: "/react-go-full-stack/user.png", alt: "User management table" },
+      {
+        src: "/react-go-full-stack/orders.png",
+        alt: "Orders list with CSV export",
+      },
+    ],
+    techStack: [
+      {
+        category: "Frontend",
+        items: [
+          "React 19",
+          "TypeScript",
+          "React Router Dom v6",
+          "React Hook Form",
+          "Zod",
+          "Tailwind CSS",
+          "Axios",
+        ],
+      },
+      {
+        category: "Backend",
+        items: ["Golang", "Fiber", "GORM", "JWT", "bcrypt"],
+      },
+      {
+        category: "Database",
+        items: ["PostgreSQL"],
+      },
+    ],
+    structure: [
+      {
+        path: "frontend/src/components/pages/",
+        description: "Pages (Login, Register, Dashboard, Products, Orders...)",
+      },
+      {
+        path: "frontend/src/components/",
+        description: "Reusable UI components",
+      },
+      { path: "backend/controllers/", description: "Request handlers (Fiber)" },
+      { path: "backend/models/", description: "GORM models" },
+      { path: "backend/middleware/", description: "JWT and RBAC middleware" },
+      { path: "backend/routes/", description: "API route definitions" },
+      { path: "backend/main.go", description: "Application entry point" },
+    ],
+    setup: {
+      backend: `cd backend
+go mod tidy
+# set environment variables (see .env.example)
+go run main.go`,
+      frontend: `cd frontend
+npm install
+npm run dev`,
+      env: ["JWT_SECRET=your_super_secret_key"],
+    },
   },
+  // پروژه‌های دیگر را به همین شکل اضافه کنید...
 ];
 
 export const aboutItems = [

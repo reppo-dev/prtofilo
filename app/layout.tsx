@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 

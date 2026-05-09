@@ -47,7 +47,7 @@ const Project = () => {
               </div>
               <div className="p-2">
                 <h3 className="text-2xl font-bold">
-                  <Link href={project.page}>{project.title}</Link>
+                  <Link href={`/projects/${project.id}`}>{project.title}</Link>
                 </h3>
                 <p>{project.desc}</p>
               </div>
