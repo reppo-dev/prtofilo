@@ -17,7 +17,7 @@ export default async function ProjectDetailPage({
   }
 
   return (
-    <main className="min-h-screen bg-gray-950 w-screen text-white overflow-x-hidden">
+    <main className="min-h-screen bg-gray-950 w-screen text-white">
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
           src={project.image}

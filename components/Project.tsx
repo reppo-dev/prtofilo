@@ -32,7 +32,7 @@ const Project = () => {
         <div className="grid md:grid-cols-2 gap-7 mt-12">
           {projects.map((project) => (
             <div
-              className="px-2 py-2 border border-neutral-900 overflow-hidden shadow-[4px-4px-0-0] max-w-160 mx-auto"
+              className="px-2 py-2 border-0 rounded-lg border-neutral-900 overflow-hidden shadow-xl max-w-160 mx-auto"
               key={project.id}
             >
               <div className="relative bg-neutral-900/90 rounded-lg overflow-hidden aspect-video">

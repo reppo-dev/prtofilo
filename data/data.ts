@@ -35,7 +35,7 @@ export const projects: ProjectDetail[] = [
   {
     id: "02",
     title: "Full-Stack App: React + Golang Fiber",
-    desc: "A modern full-stack web application with React (TypeScript) frontend and Golang (Fiber) backend. Features JWT authentication, role-based access control (RBAC), CRUD operations, and CSV export.",
+    desc: "A modern full-stack web application with React (TypeScript) frontend and Golang (Fiber) backend , Features JWT authentication.",
     image: "/react-go-full-stack/react-go-fullstack-go.png",
     tools: [
       "React.js",

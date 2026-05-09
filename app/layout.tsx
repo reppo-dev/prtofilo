@@ -30,7 +30,9 @@ export default function RootLayout({
         className={`${poppins.variable} ${spaceGrotesk.className} antialiased`}
       >
         <Header />
-        <main className="relative  bg-white z-10">{children}</main>
+        <main className="relative  overflow-x-hidden bg-white z-10">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
