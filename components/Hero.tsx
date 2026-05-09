@@ -55,10 +55,9 @@ const Hero = () => {
             developer.
           </h1>
           <p className="hero-text mx-auto text-neutral-600">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            esse deleniti autem eveniet consequuntur! Placeat praesentium
-            quisquam omnis doloribus quam veniam, pariatur aut cum excepturi!
-            Necessitatibus in omnis aspernatur? Voluptatem?
+            I build complete web applications from idea to deployment.
+            Specializing in React, Next.js, and Go, I create scalable systems
+            with clean architecture and seamless user experiences.
           </p>
           <CustomLink
             label="More about me"

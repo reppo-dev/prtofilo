@@ -1,39 +1,23 @@
 export const projects = [
   {
     id: "01",
-    title: "PROJECT 01",
-    desc: "Lorem ipsum dolor sit amet consectetur. Erat mauris tortor suspendisse at sollicitudin. Pharetra sit purus iaculis nibh urna massa tortor sed. Viverra sapien donec lectus fusce. Turpis egestas laoreet vitae porta nulla.",
-    image: "/images/project-1.webp",
-    tools: ["Next.js", "Tailwind CSS", "GSAP"],
-    liveUrl: "https://your-live-project-link.com",
-    githubUrl: "https://github.com/your-username/project-01",
-  },
-  {
-    id: "02",
-    title: "PROJECT 02",
-    desc: "Lorem ipsum dolor sit amet consectetur. Erat mauris tortor suspendisse at sollicitudin. Pharetra sit purus iaculis nibh urna massa tortor sed. Viverra sapien donec lectus fusce. Turpis egestas laoreet vitae porta nulla.",
-    image: "/images/project-2.webp",
-    tools: ["React", "Framer Motion", "Node.js", "MongoDB"],
-    liveUrl: "https://your-live-project-link.com",
-    githubUrl: "https://github.com/your-username/project-02",
-  },
-  {
-    id: "03",
-    title: "PROJECT 03",
-    desc: "Lorem ipsum dolor sit amet consectetur. Erat mauris tortor suspendisse at sollicitudin. Pharetra sit purus iaculis nibh urna massa tortor sed. Viverra sapien donec lectus fusce. Turpis egestas laoreet vitae porta nulla.",
-    image: "/images/project-3.webp",
-    tools: ["React Native", "Expo", "TypeScript", "Firebase", "Redux Toolkit"],
-    liveUrl: "https://your-live-project-link.com",
-    githubUrl: "https://github.com/your-username/project-03",
-  },
-  {
-    id: "04",
-    title: "PROJECT 04",
-    desc: "Lorem ipsum dolor sit amet consectetur. Erat mauris tortor suspendisse at sollicitudin. Pharetra sit purus iaculis nibh urna massa tortor sed. Viverra sapien donec lectus fusce. Turpis egestas laoreet vitae porta nulla.",
-    image: "/images/project-4.webp",
-    tools: ["Flutter", "Dart", "Supabase", "Bloc", "REST API"],
-    liveUrl: "https://your-live-project-link.com",
-    githubUrl: "https://github.com/your-username/project-04",
+    title: "Full-Stack App: React + Golang",
+    desc: "A full-stack web application with React (TypeScript) frontend and Golang (Fiber) backend , JWT authentication.",
+    image: "/images/react-go-fullstack-go.png",
+    page: "/fullStackApp",
+    tools: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Golang",
+      "Fiber",
+      "PostgreSQL",
+      "GORM",
+      "JWT",
+    ],
+    liveUrl: "",
+    haveLive: false,
+    githubUrl: "https://github.com/reppo-dev/app-react-golang-full-stack.git",
   },
 ];
 
@@ -63,3 +47,52 @@ export const aboutItems = [
     text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
   },
 ];
+
+// 🖥️ Frontend
+// React / Next.js (App Router)
+
+// TypeScript
+
+// Tailwind CSS / shadcn/ui
+
+// React Router / React Hook Form / Zod
+
+// HTML5, CSS3, Responsive Design
+
+// ⚙️ Backend
+// Go (Fiber framework)
+
+// REST API Design & Development
+
+// JWT Authentication (HTTP-only cookies)
+
+// Role-Based Access Control (RBAC)
+
+// Clean Architecture / MVC Pattern
+
+// 🗄️ Database & ORMs
+// PostgreSQL
+
+// GORM (Go ORM)
+
+// Prisma (Node/React side – if you still use it, نگهش دار)
+
+// Database Design & Migration
+
+// 🛠️ Tools & DevOps
+// Git & GitHub
+
+// Vercel / Netlify (Frontend Deployment)
+
+// Docker (if used)
+
+// VS Code, Terminal, Postman
+
+// pnpm / npm / yarn
+
+// 📊 Other
+// CSV Export & Data Handling
+
+// Responsive & Accessible UI (a11y)
+
+// Agile / Scrum basics (اگه تجربه داری)

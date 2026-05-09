@@ -3,7 +3,7 @@ import { aboutItems } from "@/data/data";
 
 const About = () => {
   return (
-    <section className="py-20 border-t border-neutral-200">
+    <section id="about" className="py-20 border-t border-neutral-200">
       <div className="container space-y-14">
         <div className="space-y-3">
           <div className="text-4xl lg:text-7xl font-bold flex items-center">
@@ -18,10 +18,12 @@ const About = () => {
             <span>ut me</span>
           </div>
           <p className="">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas,
-            nesciunt eligendi blanditiis numquam veritatis libero accusamus
-            quis, commodi totam eaque sunt porro adipisci velit enim, dolores
-            possimus quos harum atque.
+            Software Engineer specializing in the design and development of
+            full-stack applications with React, Next.js, and Go. I focus on
+            implementing clean architecture and secure authentication patterns
+            to build reliable, scalable systems. My work demonstrates a
+            commitment to engineering best practices, from optimizing frontend
+            performance to designing efficient APIs and database schemas.
           </p>
         </div>
         <div className="border-t border-neutral-300">

@@ -1,8 +1,5 @@
 "use client";
-import { gsap } from "gsap";
-import { useGSAP } from "@/lib/gsap";
-import { svgVariants } from "./SvgIcons";
-import { useRef } from "react";
+
 import Link from "next/link";
 
 interface CustomLinkProps {

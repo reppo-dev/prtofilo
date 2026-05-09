@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="container flex items-center justify-between gap-8.5 lg:hidden">
         <div className="flex items-center gap-2 sm:gap-7">
           <CustomLink
-            href="#projects"
+            href="/#projects"
             label="Projects"
             className="uppercase font-semibold"
           />
