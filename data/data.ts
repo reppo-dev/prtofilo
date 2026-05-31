@@ -33,7 +33,7 @@ export interface ProjectDetail {
 
 export const projects: ProjectDetail[] = [
   {
-    id: "02",
+    id: "01",
     title: "Full-Stack App: React + Golang Fiber",
     desc: "A modern full-stack web application with React (TypeScript) frontend and Golang (Fiber) backend , Features JWT authentication.",
     image: "/react-go-full-stack/react-go-fullstack-go.png",
@@ -124,7 +124,133 @@ npm run dev`,
       env: ["JWT_SECRET=your_super_secret_key"],
     },
   },
-  // پروژه‌های دیگر را به همین شکل اضافه کنید...
+  {
+    id: "02",
+    title: "Shoppy - Full-Stack E-Commerce App",
+    desc: "A modern full-stack e-commerce application built with Next.js and Golang Fiber, featuring product browsing, cart management, JWT authentication, user profiles, and AWS S3 image uploads.",
+
+    image: "/shoppy/shoppy-home.png",
+
+    tools: [
+      "Next.js",
+      "TypeScript",
+      "Shadcn UI",
+      "Zod",
+      "Golang",
+      "Fiber",
+      "PostgreSQL",
+      "GORM",
+      "JWT",
+      "AWS S3",
+    ],
+
+    liveUrl: "",
+    haveLive: false,
+    githubUrl: "https://github.com/reppo-dev/shoppy.git",
+
+    overview:
+      "Shoppy is a full-stack e-commerce application developed to explore modern web application architecture using Next.js and Golang. The project focuses on building a scalable shopping experience with secure authentication, product management, cloud-based image storage, and a responsive user interface.",
+
+    role: "Full-Stack Developer (Solo Project)",
+    duration: "3 weeks",
+
+    features: [
+      "JWT-based authentication with user registration and login",
+      "Product listing with category filtering and search functionality",
+      "Shopping cart with add and remove item actions",
+      "User profile management and account updates",
+      "Product creation with image uploads to AWS S3",
+      "Responsive UI built with Shadcn UI components",
+      "RESTful API architecture using Go Fiber",
+      "Schema validation using Zod",
+    ],
+
+    screenshots: [
+      { src: "/shoppy/home.png", alt: "Home page with product listing" },
+      { src: "/shoppy/login.png", alt: "Login and registration page" },
+      {
+        src: "/shoppy/products-list.png",
+        alt: "Products page with search and filters",
+      },
+      { src: "/shoppy/cart.png", alt: "Shopping cart page" },
+      { src: "/shoppy/profile.png", alt: "User profile page" },
+      {
+        src: "/shoppy/create-product.png",
+        alt: "Create product form with image upload",
+      },
+    ],
+
+    techStack: [
+      {
+        category: "Frontend",
+        items: ["Next.js", "TypeScript", "Shadcn UI", "Zod", "pnpm"],
+      },
+      {
+        category: "Backend",
+        items: ["Golang", "Fiber", "GORM", "JWT"],
+      },
+      {
+        category: "Database",
+        items: ["PostgreSQL"],
+      },
+      {
+        category: "Cloud Services",
+        items: ["AWS S3"],
+      },
+    ],
+
+    structure: [
+      {
+        path: "frontend/app/",
+        description: "Next.js App Router pages and layouts",
+      },
+      {
+        path: "frontend/components/",
+        description: "Reusable UI components and forms",
+      },
+      {
+        path: "frontend/lib/",
+        description: "Utilities, API helpers, and shared logic",
+      },
+      {
+        path: "backend/handlers/",
+        description: "HTTP request handlers and business logic",
+      },
+      {
+        path: "backend/models/",
+        description: "Database models managed with GORM",
+      },
+      {
+        path: "backend/routes/",
+        description: "API route definitions",
+      },
+      {
+        path: "backend/main.go",
+        description: "Application entry point",
+      },
+    ],
+
+    setup: {
+      backend: `cd backend
+go mod tidy
+go run main.go`,
+
+      frontend: `cd frontend
+pnpm install
+pnpm dev`,
+
+      env: [
+        "GO_API_URL=http://localhost:8000",
+        "JWT_SECRET=secret",
+        "PARSPACK_ACCESS_KEY=your_access_key",
+        "PARSPACK_SECRET_KEY=your_secret_key",
+        "PARSPACK_ENDPOINT=your_endpoint",
+        "PARSPACK_BUCKET_NAME=your_bucket",
+        "PARSPACK_REGION=your_region",
+        "PARSPACK_S3_PATH_STYLE=true",
+      ],
+    },
+  },
 ];
 
 export const aboutItems = [
@@ -153,52 +279,3 @@ export const aboutItems = [
     text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
   },
 ];
-
-// 🖥️ Frontend
-// React / Next.js (App Router)
-
-// TypeScript
-
-// Tailwind CSS / shadcn/ui
-
-// React Router / React Hook Form / Zod
-
-// HTML5, CSS3, Responsive Design
-
-// ⚙️ Backend
-// Go (Fiber framework)
-
-// REST API Design & Development
-
-// JWT Authentication (HTTP-only cookies)
-
-// Role-Based Access Control (RBAC)
-
-// Clean Architecture / MVC Pattern
-
-// 🗄️ Database & ORMs
-// PostgreSQL
-
-// GORM (Go ORM)
-
-// Prisma (Node/React side – if you still use it, نگهش دار)
-
-// Database Design & Migration
-
-// 🛠️ Tools & DevOps
-// Git & GitHub
-
-// Vercel / Netlify (Frontend Deployment)
-
-// Docker (if used)
-
-// VS Code, Terminal, Postman
-
-// pnpm / npm / yarn
-
-// 📊 Other
-// CSV Export & Data Handling
-
-// Responsive & Accessible UI (a11y)
-
-// Agile / Scrum basics (اگه تجربه داری)
