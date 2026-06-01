@@ -257,8 +257,8 @@ export const aboutItems = [
   {
     id: 1,
     icon: "/images/recruitment.png",
-    title: "1+ Years of Experience",
-    text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
+    title: "1+ YEAR OF EXPERIENCE",
+    text: "Focused on building modern full-stack applications with React, Next.js, and Go, emphasizing performance, maintainability, and security.",
   },
   // {
   //   id: 2,
@@ -275,7 +275,7 @@ export const aboutItems = [
   {
     id: 4,
     icon: "/images/portfolio.png",
-    title: "More 10 practice projects",
-    text: "dolor sit amet consectetur. Erat mauris tortor suspendisse at",
+    title: "10+ PROJECTS COMPLETED",
+    text: "Completed hands-on projects covering authentication, REST APIs, cloud storage integration, and responsive user interfaces.",
   },
 ];
