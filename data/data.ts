@@ -251,6 +251,173 @@ pnpm dev`,
       ],
     },
   },
+  {
+    id: "03",
+
+    title: "Pizza Ordering Platform",
+
+    desc: "A full-stack pizza ordering platform built with Next.js and Golang Fiber, featuring JWT authentication, role-based access control, shopping cart management, address handling, pizza management, and S3-compatible image uploads.",
+
+    image: "/pizza-app/home.png",
+
+    tools: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "React Hook Form",
+      "Zod",
+      "Golang",
+      "Fiber",
+      "PostgreSQL",
+      "GORM",
+      "JWT",
+      "RBAC",
+      "S3 Storage",
+    ],
+
+    liveUrl: "",
+    haveLive: false,
+
+    githubUrl: "https://github.com/reppo-dev/pizza-web-app.git",
+
+    overview:
+      "Pizza Ordering Platform is a full-stack web application designed to simulate a real-world pizza delivery system. The project includes customer-facing features such as pizza browsing, search, cart management, and address handling, alongside a complete admin dashboard for managing pizzas, categories, variants, users, and permissions.",
+
+    role: "Full-Stack Developer (Solo Project)",
+
+    duration: "4 weeks",
+
+    features: [
+      "JWT authentication and authorization",
+      "Role-Based Access Control (RBAC)",
+      "Pizza search functionality",
+      "Pizza variants and pricing management",
+      "Shopping cart management",
+      "Address management (Create, Update, Delete)",
+      "User profile management",
+      "Admin dashboard",
+      "Pizza CRUD operations",
+      "User management",
+      "Category management",
+      "Variant management",
+      "Image uploads using S3-compatible object storage",
+      "Server Actions with Next.js",
+      "Schema validation using Zod",
+    ],
+
+    screenshots: [
+      {
+        src: "/pizza-app/home.png",
+        alt: "Home page",
+      },
+      {
+        src: "/pizza-app/pizza.png",
+        alt: "Pizza listing page",
+      },
+      {
+        src: "/pizza-app/address.png",
+        alt: "Address management page",
+      },
+      {
+        src: "/pizza-app/profile.png",
+        alt: "User profile page",
+      },
+      {
+        src: "/pizza-app/user.png",
+        alt: "User management page",
+      },
+      {
+        src: "/pizza-app/login.png",
+        alt: "Login page",
+      },
+    ],
+
+    techStack: [
+      {
+        category: "Frontend",
+        items: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Shadcn UI",
+          "React Hook Form",
+          "Zod",
+          "Axios",
+        ],
+      },
+      {
+        category: "Backend",
+        items: ["Golang", "Fiber", "GORM", "JWT", "RBAC"],
+      },
+      {
+        category: "Database",
+        items: ["PostgreSQL"],
+      },
+      {
+        category: "Storage",
+        items: ["S3-Compatible Object Storage"],
+      },
+    ],
+
+    structure: [
+      {
+        path: "frontend/app/",
+        description: "Next.js App Router pages and layouts",
+      },
+      {
+        path: "frontend/components/",
+        description: "Reusable UI components and forms",
+      },
+      {
+        path: "frontend/actions/",
+        description: "Server Actions and API integration",
+      },
+      {
+        path: "backend/controller/",
+        description: "Fiber request handlers",
+      },
+      {
+        path: "backend/models/",
+        description: "Database models",
+      },
+      {
+        path: "backend/routes/",
+        description: "API route definitions",
+      },
+      {
+        path: "backend/middleware/",
+        description: "JWT and RBAC middleware",
+      },
+      {
+        path: "backend/main.go",
+        description: "Application entry point",
+      },
+    ],
+
+    setup: {
+      backend: `cd backend
+go mod tidy
+go run main.go`,
+
+      frontend: `cd frontend
+pnpm install
+pnpm dev`,
+
+      env: [
+        "DATABASE_URL=",
+        "JWT_SECRET=",
+        "GO_API_URL=",
+        "PARSPACK_S3_PATH_STYLE=",
+        "PARSPACK_REGION=",
+        "PARSPACK_ENDPOINT=",
+        "PARSPACK_ACCESS_KEY=",
+        "PARSPACK_SECRET_KEY=",
+        "PARSPACK_BUCKET_NAME=",
+      ],
+    },
+  },
 ];
 
 export const aboutItems = [

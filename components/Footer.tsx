@@ -5,19 +5,20 @@ import CustomLink from "./CustomLink";
 
 const Footer = () => {
   const handleCopyEmail = () => {
-    const email = "Youremail@gmail.com";
+    const email = "reppo.dev@gmail.com";
     navigator.clipboard.writeText(email).then(() => {
       setTimeout(() => 2000);
     });
   };
   return (
-    <footer className="bg-neutral-950 z-0 text-white h-[40vh] fixed pt-10 pb-10 bottom-0 w-full">
+    <footer className="bg-neutral-950 text-white pt-10 pb-10">
       <div className="container space-y-9 flex flex-col justify-center h-full">
         <div className="flex items-center justify-between">
           <div className="flex gap-3">
-            {["Email", "Linkedin"].map((link) => (
-              <CustomLink key={link} label={link} href="#" />
-            ))}
+            <button onClick={handleCopyEmail} className="cursor-pointer">
+              Email
+            </button>
+            <span>linkedin</span>
           </div>
           <div className="flex gap-3">
             {["Twitter", "Whatsup"].map((link) => (
@@ -27,7 +28,9 @@ const Footer = () => {
         </div>
         <div className="flex items-end justify-between">
           <h4 className="text-4xl sm:text-5xl text-nowrap uppercase font-bold">
-            reppovn@gmail.com
+            reppo.dev
+            <br />
+            @gmail.com
           </h4>
           <button
             onClick={handleCopyEmail}

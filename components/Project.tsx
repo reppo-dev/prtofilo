@@ -5,7 +5,7 @@ import { RiGithubFill, RiGlobalLine } from "react-icons/ri";
 
 const Project = () => {
   return (
-    <section id="projects" className="py-20 mb-[40vh]">
+    <section id="projects" className="py-20">
       <div className="container border-t border-neutral-300">
         <div className="flex items-center gap-4 py-4">
           <div className="shrink-0 hidden sm:block">

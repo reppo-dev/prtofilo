@@ -61,7 +61,7 @@ const Hero = () => {
           </p>
           <CustomLink
             label="More about me"
-            href="#"
+            href="/#about"
             className="text-xl font-semibold"
           />
         </div>
